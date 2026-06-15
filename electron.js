@@ -20,6 +20,9 @@ function createWindow() {
   // Always load from built dist folder
   win.loadFile(path.join(__dirname, 'dist', 'index.html'));
 
+  // ADD THIS LINE: Open DevTools for debugging
+  win.webContents.openDevTools();
+
   win.once('ready-to-show', () => win.show());
 
   // Open external links in browser
