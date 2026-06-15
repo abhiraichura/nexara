@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { DB, fmt, fmtK, calcPay, SD_TXN, SD_EMP, SD_INV, SD_VENDORS, SD_LEADS, COMPLIANCE, STATES, MODS, CATS } from './data.js';
-import { T, f, mo, Badge, KPI, Inp, Sel, BtnP, BtnG, SHdr, Tabs, Modal } from './components.jsx';
-
+import { T, f, mo, Badge as Bdg, KPI, Inp, Sel, BtnP, BtnG, SHdr, Tabs, Modal as Mdl } from './components.jsx';
 function Onboarding({ onComplete }) {
   const [step, setStep] = useState(0);
   const [firm, setFirm] = useState({});
