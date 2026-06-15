@@ -1,0 +1,20 @@
+{
+  "name": "nexara",
+  "version": "1.0.0",
+  "description": "Nexara — Private Business OS",
+  "main": "electron.js",
+  "scripts": {
+    "start": "electron .",
+    "dev":   "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "electron": "^27.0.0",
+    "vite": "^5.0.0"
+  }
+}
