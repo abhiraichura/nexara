@@ -5,27 +5,21 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1440,
     height: 900,
-    minWidth: 1024,
+    minWidth: 1100,
     minHeight: 700,
     titleBarStyle: 'hiddenInset',
-    backgroundColor: '#F4F1EC',
+    backgroundColor: '#F5F3EF',
     show: false,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      sandbox: false
+      sandbox: false,
     }
   });
 
-  // Always load from built dist folder
   win.loadFile(path.join(__dirname, 'dist', 'index.html'));
-
-  // ADD THIS LINE: Open DevTools for debugging
-  win.webContents.openDevTools();
-
   win.once('ready-to-show', () => win.show());
 
-  // Open external links in browser
   win.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);
     return { action: 'deny' };
@@ -59,14 +53,6 @@ function createWindow() {
         { role: 'resetZoom' }, { role: 'zoomIn' }, { role: 'zoomOut' },
         { type: 'separator' },
         { role: 'togglefullscreen' }
-      ]
-    },
-    {
-      label: 'Window',
-      submenu: [
-        { role: 'minimize' }, { role: 'zoom' },
-        { type: 'separator' },
-        { role: 'front' }
       ]
     }
   ]);
